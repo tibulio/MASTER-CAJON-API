@@ -28,6 +28,9 @@ app.post('/adjust-bpm', upload.single('audio'), (req, res) => {
             res.status(500).send('Erro ao processar áudio.');
         });
 });
+app.get('/', (req, res) => {
+  res.send('API online e funcionando!');
+});
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
